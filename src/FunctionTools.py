@@ -20,7 +20,7 @@ class ScriptureDescriptionToolSpec(BaseToolSpec):
         result = chardet.detect(f.read())
 
     encoding = result['encoding']
-    df = pd.read_csv(r"..\Data\scripture_descriptions.csv", encoding=encoding)
+    df = pd.read_csv("Data/scripture_descriptions.csv", encoding=encoding)
 
     @st.cache_data
     def get_description(_self, level_0, level_1:int=None, level_2:int=None, level_3:int=None):
@@ -62,8 +62,8 @@ class MantraToolSpec(BaseToolSpec):
     '''
     spec_functions = ["get_translation", "get_vedamantra_details", "get_vedamantra_summary"]
 
-    TRANSLATION_CSV_PATH = r'..\Data\trans_Rig_Ath_index_v2.csv'
-    VEDAMANTRA_CSV_PATH = r"..\Data\veda_content_modified_v3.csv"
+    TRANSLATION_CSV_PATH = 'Data/trans_Rig_Ath_index_v2.csv'
+    VEDAMANTRA_CSV_PATH = "Data/veda_content_modified_v3.csv"
 
     def __init__(self):
         super().__init__()
