@@ -51,7 +51,7 @@ storage_context_pine = StorageContext.from_defaults(vector_store=vector_store_pi
 index_store = VectorStoreIndex.from_vector_store(vector_store_pine,storage_context=storage_context_pine)
 query_engine_vector = index_store.as_query_engine(similarity_top_k=5,vector_store_query_mode ='hybrid',alpha=0.6)
 #pandas Engine
-df_veda_details = pd.read_csv(r".\Data\veda_content_details.csv",encoding='utf-8')
+df_veda_details = pd.read_csv("Data/veda_content_details.csv",encoding='utf-8')
 query_engine_pandas = PandasQueryEngine(df=df_veda_details)
 
 # Query Engine Tools
