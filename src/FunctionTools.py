@@ -16,7 +16,7 @@ class ScriptureDescriptionToolSpec(BaseToolSpec):
     # Define the functions that we export to the LLM
     spec_functions = ["get_description"]
 
-    with open("../Data/scripture_descriptions.csv", 'rb') as f:
+    with open("Data/scripture_descriptions.csv", 'rb') as f:
         result = chardet.detect(f.read())
 
     encoding = result['encoding']
