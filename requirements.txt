@@ -1,0 +1,10 @@
+openai
+sentence_transformers
+llama_index==0.10.4
+llama-index-vector-stores-pinecone
+llama-index-embeddings-huggingface
+pinecone-client
+cohere 
+sentence_transformers
+chardet
+streamlit
